@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
-const Cursor = ({ hover }) => {
+const Cursor = ({ hover,hoverLarge }) => {
   const [largeCircle, setLargeCircle] = useState({ x: 0, y: 0 });
   const [smallCircle, setSmallCircle] = useState({ x: 0, y: 0 });
 
-  const variante = {
+  const varianteSmall = {
     default: {
       x: smallCircle.x - 4,
       y: largeCircle.y - 4,
@@ -18,7 +18,38 @@ const Cursor = ({ hover }) => {
       y: largeCircle.y - 48,
       mixBlendMode: 'difference',
     },
+    socials: {
+      height: 60,
+      width: 60,
+      x: smallCircle.x - 30,
+      y: largeCircle.y - 30,
+      mixBlendMode: 'difference',
+    },
+    sections: {
+      height: 4,
+      width: 4,
+      backgroundColor: 'white',
+      x: smallCircle.x - 2,
+      y: largeCircle.y - 2,
+      mixBlendMode: 'normal'
+    },
   };
+
+  const varianteLarge = {
+    default: { 
+        x: largeCircle.x - 48, 
+        y: largeCircle.y - 48,
+        mixBlendMode: 'saturation'
+    },
+    sections:{
+        height: 32,
+        width: 32,
+        x: largeCircle.x - 22, 
+        y: largeCircle.y - 22,
+        mixBlendMode: 'normal'
+    }
+  }
+
 
   useEffect(() => {
     const mouseMove = (e) => {
@@ -33,9 +64,9 @@ const Cursor = ({ hover }) => {
   }, []);
 
   return (
-    <div className='pointer-events-none'>
-      <motion.div animate={{ x: largeCircle.x - 48, y: largeCircle.y - 48 }} transition={{ type: 'spring', bounce: 0, duration: 0, mass: 1.5, damping: 30, stiffness: 300 }} className={`z-10 absolute w-24 h-24 bg-[#3500D3] rounded-full mix-blend-saturation`}></motion.div>
-      <motion.div variants={variante} animate={hover} transition={{ type: 'spring', height: { duration: 0.2 }, width: { duration: 0.2 }, bounce: 0, duration: 0, mass: 1, damping: 30, stiffness: 600 }} className={`z-10 absolute bg-[#3500D3] w-2 h-2 rounded-full`}></motion.div>
+    <div className='pointer-events-none z-10'>
+      <motion.div variants={varianteLarge} animate={hoverLarge} transition={{ type: 'spring', bounce: 0, duration: 0, mass: 1.5, damping: 30, stiffness: 300 }} className={`z-10  w-24 h-24 bg-violeta rounded-full fixed`}></motion.div>
+      <motion.div variants={varianteSmall} animate={hover} transition={{ type: 'spring', height: { duration: 0.2 }, width: { duration: 0.2 }, bounce: 0, duration: 0, mass: 1, damping: 30, stiffness: 600 }} className={`z-10 fixed bg-violeta w-2 h-2 rounded-full `}></motion.div>
     </div>
   );
 };
