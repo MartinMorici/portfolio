@@ -22,7 +22,7 @@ const About = () => {
         </h2>
 
         <p className='max-w-[644px] font-roboto text-white leading-[1.7] mt-7 '>
-          Hola! Mi nombre es Martín y soy un apasionado del desarrollo web. Me considero un frontend developer <span className='font-semibold text-amarillo'>creativo</span> y <span className='font-semibold text-amarillo'>dedicado</span>, con un ojo agudo para el diseño y enfocado en crear experiencias de usuario confortantes.
+          Hola! Mi nombre es Martín y soy un apasionado del desarrollo web. Me considero un frontend developer <span className='font-semibold text-amarillo'>creativo</span> y <span className='font-semibold text-amarillo'>dedicado</span>, con buen ojo para el diseño y enfocado en crear experiencias de usuario agradables y accesibles.
           <br />
           <br />
           Me encanta trabajar en proyectos desafiantes y estoy constantemente buscando nuevas formas de <span className='font-semibold text-amarillo'>mejorar mis habilidades</span>.
