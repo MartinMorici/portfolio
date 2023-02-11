@@ -13,7 +13,7 @@ const About = () => {
   };
 
   return (
-    <section className='h-screen flex items-center bg-gris-oscuro -z-20'>
+    <section className='h-[100vh] flex items-center -z-20'>
       <Container>
         <h2 className='leading-[0.95] text-white font-poppins font-semibold text-[75px]'>
           <span className='text-[40px]'>//</span> <span className='relative z-[1]'><span className=' before:z-[-1]  before:w-[104%] before:absolute before:bottom-[18px] before:h-[15px] before:bg-azul'>About</span></span>
