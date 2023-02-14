@@ -28,7 +28,7 @@ const Cursor = ({ hover,hoverLarge }) => {
     sections: {
       height: 4,
       width: 4,
-      backgroundColor: 'white',
+      backgroundColor: 'rgb(255,255,255)',
       x: smallCircle.x - 2,
       y: largeCircle.y - 2,
       mixBlendMode: 'normal'

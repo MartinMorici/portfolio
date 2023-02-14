@@ -26,7 +26,7 @@ function App() {
       <div className="bg-gris-oscuro" onMouseEnter={mouseEnterSections} onMouseLeave={mouseLeaveSections}>
         <About/>
         <Skills/>
-        <Projects/>
+        <Projects/> 
       </div>
 
     </div>

@@ -18,7 +18,7 @@ import Arrival from '../assets/arrival.png'
 export const projects = [
     {
         nombre: 'ARRIVAL ECOMMERCE',
-        descripcion: 'Arrival es un ecommerce que realicé con el objetivo de poner\nen práctica mis conocimientos en React. También me pareció\ninteresante sumarle la complejidad de tener un diseño\nvistoso y elegante por eso decidí imitar un diseño creado\npor Nizar Ali.\nPosee un carrito funcional, y filtros para los productos.\nUsé Firebase como base de datos, donde cargué muchos productos\ncon distinta información e imágenes para hacer el proyecto más\ndesafiante',
+        descripcion: 'Arrival es un ecommerce que realicé con el objetivo de poner\nen práctica mis conocimientos en React. También me pareció\ninteresante sumarle la complejidad de tener un diseño\nvistoso.\nPosee un carrito funcional, y filtros para los productos.\nUsé Firebase como base de datos, donde cargué muchos productos\ncon distinta información e imágenes para hacer el proyecto más\ndesafiante.',
         tecnologias:[
             {
                 nombre: 'React',

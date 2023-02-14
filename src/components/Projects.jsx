@@ -5,7 +5,7 @@ import Container from './Container';
 
 const Projects = () => {
   return (
-    <main className='h-[100vh] flex items-center -z-20'>
+    <main className='flex items-center -z-20'>
       <Container>
         <h2 className='leading-[0.95] text-white font-poppins font-semibold text-[75px]'>
           <span className='text-[40px]'>//</span>{' '}
@@ -19,7 +19,7 @@ const Projects = () => {
               <article className='flex gap-4 items-center justify-between'>
                 <div className='max-w-[700px] w-full'>
                   <h3 className='font-poppins w-fit font-bold text-[38px] text-white mb-2'>{project.nombre}</h3>
-                  <p className=' tracking-[0.04rem] font-roboto text-white font-light leading-7 text-[15px]'>{project.descripcion}</p>
+                  <p className=' font-roboto text-white leading-[1.7]'>{project.descripcion}</p>
                   <div className='flex gap-3'>
                     {project.tecnologias.map((tec) => {
                       return (
