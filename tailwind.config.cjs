@@ -7,7 +7,11 @@ module.exports = {
         'amarillo': '#CAFF2C',
         'violeta': '#3500D3',
         'azul': '#240090',
-        'gris-oscuro':'#1A191D'
+        'gris-oscuro':'#1A191D',
+        'rosa':'#DF058D',
+        'naranja':'#FF6B2B',
+        'celeste': '#33A9DC',
+        'amarillopatito': '#FFCA28'
       },
       fontFamily: {
         poppins: ['Poppins'],

@@ -4,10 +4,12 @@ import Cursor from "./components/Cursor"
 import Header from "./components/Header"
 import Projects from "./components/Projects"
 import Skills from "./components/Skills"
+import {useScroll} from 'framer-motion';
 
 function App() {
   const [hover, setHover] = useState('default')
   const [hoverLarge, setHoverLarge] = useState('default')
+  
 
   const mouseEnterSections = () => {
     setHoverLarge('sections');

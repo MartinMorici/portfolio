@@ -65,8 +65,8 @@ const Cursor = ({ hover,hoverLarge }) => {
 
   return (
     <div className='pointer-events-none z-10'>
-      <motion.div variants={varianteLarge} animate={hoverLarge} transition={{ type: 'spring', bounce: 0, duration: 0, mass: 1.5, damping: 30, stiffness: 300 }} className={`z-10  w-24 h-24 bg-violeta rounded-full fixed`}></motion.div>
-      <motion.div variants={varianteSmall} animate={hover} transition={{ type: 'spring', height: { duration: 0.2 }, width: { duration: 0.2 }, bounce: 0, duration: 0, mass: 1, damping: 30, stiffness: 600 }} className={`z-10 fixed bg-violeta w-2 h-2 rounded-full `}></motion.div>
+      <motion.div variants={varianteLarge} animate={hoverLarge} transition={{ type: 'spring', bounce: 0, duration: 0, mass: 1.5, damping: 30, stiffness: 300 }} className={`z-20  w-24 h-24 bg-violeta rounded-full fixed`}></motion.div>
+      <motion.div variants={varianteSmall} animate={hover} transition={{ type: 'spring', height: { duration: 0.2 }, width: { duration: 0.2 }, bounce: 0, duration: 0, mass: 1, damping: 30, stiffness: 600 }} className={`z-20 fixed bg-violeta w-2 h-2 rounded-full `}></motion.div>
     </div>
   );
 };
