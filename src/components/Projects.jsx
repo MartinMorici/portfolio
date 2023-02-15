@@ -1,34 +1,39 @@
 import React from 'react';
+import { useContext } from 'react';
 import { FaGithub, FaLink } from 'react-icons/fa';
+import { CursorContext } from '../context/CursorContext';
 import { projects } from '../utils/projects';
 import Container from './Container';
 
 const Projects = () => {
+  const {mouseEnterTitle, mouseLeaveSectionss, mouseEnterText} = useContext(CursorContext)
   return (
-    <main className='flex items-center -z-20'>
+    <main className='flex items-center z-20'>
       <Container>
-        <h2 className='leading-[0.95] text-white font-poppins font-semibold text-[75px]'>
+        <h2 className='leading-[0.95] text-white font-poppins font-semibold text-[75px] w-fit' onMouseEnter={mouseEnterTitle} onMouseLeave={mouseLeaveSectionss}>
           <span className='text-[40px]'>//</span>{' '}
           <span className='relative z-[1]'>
             <span className=' before:z-[-1]  before:w-[104%] before:absolute before:bottom-[18px] before:h-[15px] before:bg-[#00BF8F]'>Projects</span>
           </span>
         </h2>
         <section className='mt-8 '>
-          {projects.map((project) => {
+          {projects.map((project,index) => {
             return (
-              <article className='flex gap-4 items-center justify-between'>
+              <article className='flex gap-4 items-center justify-between' key={index}>
                 <div className='max-w-[700px] w-full'>
-                  <h3 className='font-poppins w-fit font-bold text-[38px] text-white mb-2'>{project.nombre}</h3>
-                  <p className=' font-roboto text-white leading-[1.7]'>{project.descripcion}</p>
-                  <div className='flex gap-3'>
-                    {project.tecnologias.map((tec) => {
-                      return (
-                        <div className='flex items-center mt-4 bg-white font-semibold text-black rounded-[4px] font-poppins px-3 py-1'>
-                          <img className='h-[20px]' src={tec.imagen} alt={`${tec.nombre} imagen`} />
-                          <h4 className='pl-2 text-[15px]'>{tec.nombre}</h4>
-                        </div>
-                      );
-                    })}
+                  <div>
+                    <h3 className='font-poppins w-fit font-bold text-[38px] text-white mb-2' onMouseEnter={mouseEnterText} onMouseLeave={mouseLeaveSectionss}>{project.nombre}</h3>
+                    <p className=' font-roboto text-white leading-[1.7]' onMouseEnter={mouseEnterText} onMouseLeave={mouseLeaveSectionss}>{project.descripcion}</p>
+                    <div className='flex gap-3' onMouseEnter={mouseEnterText} onMouseLeave={mouseLeaveSectionss} >
+                      {project.tecnologias.map((tec,index) => {
+                        return (
+                          <div key={index} className='flex items-center mt-4 bg-white font-semibold text-black rounded-[4px] font-poppins px-3 py-1'>
+                            <img className='h-[20px]' src={tec.imagen} alt={`${tec.nombre} imagen`} />
+                            <h4 className='pl-2 text-[15px]'>{tec.nombre}</h4>
+                          </div>
+                        );
+                      })}
+                    </div>
                   </div>
                   <div className='flex gap-5 mt-8 font-roboto'>
                     <a href={project.website} target='_blank'>
@@ -43,10 +48,9 @@ const Projects = () => {
                     </a>
                   </div>
                 </div>
-
-
-                  <div className='w-[500px] '><img src={project.imagen} alt={project.nombre} /></div>
-   
+                
+                <div className='w-[500px] ' onMouseEnter={mouseEnterTitle} onMouseLeave={mouseLeaveSectionss}><img src={project.imagen} alt={project.nombre} /></div>
+  
               </article>
             );
           })}

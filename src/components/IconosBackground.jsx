@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { VscBeaker } from 'react-icons/vsc';
-import { FaTools, FaToolbox, FaGreaterThanEqual } from 'react-icons/fa';
+import { FaTools, FaToolbox } from 'react-icons/fa';
 import { GiRocket, GiTechnoHeart, GiCommercialAirplane, GiGearStickPattern } from 'react-icons/gi';
 import { IoColorWand, IoHammerSharp } from 'react-icons/io5';
 import { AiFillStar } from 'react-icons/ai';
@@ -11,7 +11,7 @@ const IconosBackground = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <div className='absolute max-w-[1260px] w-full left-1/2 transform -translate-x-1/2' ref={ref}>
+    <div className='absolute max-w-[1260px] w-full left-1/2 transform -translate-x-1/2 z-[1]' ref={ref}>
       <div className='relative flex flex-col items-center h-[300px] opacity-70 '>
         <VscBeaker
           className='w-8 h-8 text-amarillo '

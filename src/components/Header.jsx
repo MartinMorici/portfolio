@@ -1,16 +1,13 @@
 import React from 'react'
+import { useContext } from 'react';
 import { FaEnvelope, FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
+import { CursorContext } from '../context/CursorContext';
+import { Player, Controls } from '@lottiefiles/react-lottie-player';
+import scroll from '../assets/scroll'
+const Header = () => {
+  const {mouseEnterSocials, mouseEnter, mouseLeave, mouseEnterSections, mouseLeaveSections} = useContext(CursorContext)
 
-const Header = ({setHover,mouseEnterGradient, mouseLeaveGradient}) => {
-  const mouseEnterSocials =() => {
-    setHover('socials')
-  }
-  const mouseEnter =() => {
-    setHover('text')
-  }
-  const mouseLeave =() => {
-    setHover('default')
-  } 
+  
   return (
     <header className='bg-hero-pattern h-screen text-white flex justify-center items-center'>
         <div className='absolute w-full font-medium font-roboto flex  h-32 items-center px-10 top-0'>
@@ -39,6 +36,7 @@ const Header = ({setHover,mouseEnterGradient, mouseLeaveGradient}) => {
         <section className='font-poppins text-center'>
           <h1 className='text-[7vw] font-semibold' onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>MARTÍN MORICI</h1>
           <h2 className='text-3xl font-normal tracking-wider w-fit mx-auto font-roboto' onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>FRONT END DEVELOPER</h2>
+          
         </section>
         
         <ul onMouseEnter={mouseEnterSocials} onMouseLeave={mouseLeave} className='absolute flex flex-col left-0 gap-6 px-10'>
@@ -63,7 +61,16 @@ const Header = ({setHover,mouseEnterGradient, mouseLeaveGradient}) => {
             </a>
           </li>
         </ul>
-        <div className='bg-hero-gradient absolute bottom-0 h-[150px] z-[4] w-full' onMouseEnter={mouseEnterGradient} onMouseLeave={mouseLeaveGradient}></div>
+        <Player
+            autoplay
+            loop
+            src={scroll}
+            style={{ height: '50px', width: '50px', margin:'0 auto', display:'block', position:'absolute',bottom:'15%', left:'50%', transform:'translate(-50%,-50%)' }}
+          >
+            <Controls visible={false} buttons={['play', 'repeat', 'frame', 'debug']} />
+          </Player>
+
+        <div className='bg-hero-gradient absolute bottom-0 h-[150px] z-[4] w-full' onMouseEnter={mouseEnterSections} onMouseLeave={mouseLeaveSections}></div>
     </header>
   )
 }

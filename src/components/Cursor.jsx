@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import { CursorContext } from '../context/CursorContext';
 
-const Cursor = ({ hover,hoverLarge }) => {
+const Cursor = () => {
+  const {hover, hoverLarge} = useContext(CursorContext)
   const [largeCircle, setLargeCircle] = useState({ x: 0, y: 0 });
   const [smallCircle, setSmallCircle] = useState({ x: 0, y: 0 });
 
@@ -17,6 +19,20 @@ const Cursor = ({ hover,hoverLarge }) => {
       x: smallCircle.x - 48,
       y: largeCircle.y - 48,
       mixBlendMode: 'difference',
+    },
+    textSections: {
+      height: 60,
+      width: 60,
+      x: smallCircle.x - 30,
+      y: largeCircle.y - 30,
+      mixBlendMode: 'difference',
+    },
+    titleSections: {
+      height: 96,
+      width: 96,
+      x: smallCircle.x - 48,
+      y: largeCircle.y - 48,
+      mixBlendMode: 'exclusion',
     },
     socials: {
       height: 60,
@@ -47,6 +63,12 @@ const Cursor = ({ hover,hoverLarge }) => {
         x: largeCircle.x - 22, 
         y: largeCircle.y - 22,
         mixBlendMode: 'normal'
+    },
+    oculto:{
+        height: 0,
+        width: 0,
+        x: largeCircle.x - 22, 
+        y: largeCircle.y - 22,
     }
   }
 
