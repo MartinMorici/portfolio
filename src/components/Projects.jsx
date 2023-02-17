@@ -8,22 +8,23 @@ import Container from './Container';
 const Projects = () => {
   const {mouseEnterTitle, mouseLeaveSectionss, mouseEnterText, mouseEnterButton} = useContext(CursorContext)
   return (
-    <main className='flex items-center z-20'>
+    <main className='flex items-center z-20 bg-gris-oscuro '>
       <Container>
-        <h2 className='leading-[0.95] text-white font-poppins font-semibold text-[55px] sm:text-[75px] w-fit' onMouseEnter={mouseEnterTitle} onMouseLeave={mouseLeaveSectionss}>
-          <span className='text-[30px] sm:text-[40px]'>//</span>{' '}
+        <h2 className='leading-[0.95] text-white font-poppins font-semibold text-[55px] sm:text-[75px] w-fit group' onMouseEnter={mouseEnterButton} onMouseLeave={mouseLeaveSectionss}>
+          <span className='text-[30px] sm:text-[40px]'>//</span>
           <span className='relative z-[1]'>
-            <span className=' before:z-[-1]  before:w-[104%] before:absolute before:bottom-[18px] before:h-[15px] before:bg-[#00BF8F]'>Projects</span>
+            <span className='group-hover:before:h-[45px] before:transition-all before:z-[-1]  before:w-[104%] before:absolute before:bottom-[18px]  before:h-[12px] sm:before:h-[15px] before:bg-[#00BF8F]'>Projects</span>
           </span>
         </h2>
         <section className='mt-8 '>
           {projects.map((project,index) => {
             return (
-              <article className=' rounded-md  sm:border-none flex gap-4 mb-32 justify-between items-start lg:items-center flex-col lg:flex-row w-fit mx-auto' key={index}>
+              <article className=' rounded-md  sm:border-none flex gap-4 mb-20 justify-between items-start lg:items-center flex-col lg:flex-row w-fit mx-auto' key={index}>
                 <div className='max-w-[650px] w-full'>
                   <div>
                     <h3 className='mb-3 text-[26px] font-poppins w-fit font-bold sm:text-[38px] text-white sm:mb-5 leading-8' onMouseEnter={mouseEnterText} onMouseLeave={mouseLeaveSectionss}>{project.nombre}</h3>
-                    <p className=' font-poppins text-[#b8b9bb] sm:leading-[1.7] text-[16px] ' onMouseEnter={mouseEnterText} onMouseLeave={mouseLeaveSectionss}>{project.descripcion}</p>
+                    <div className='block sm:hidden max-w-[600px] w-full order-[-1] lg:order-1 rounded-sm' onMouseEnter={mouseEnterTitle} onMouseLeave={mouseLeaveSectionss}><img className='rounded-sm' src={project.imagen} alt={project.nombre} /></div>
+                    <p className='mt-2 sm:mt-0 font-poppins text-[#b8b9bb] sm:leading-[1.7] text-[16px] ' onMouseEnter={mouseEnterText} onMouseLeave={mouseLeaveSectionss}>{project.descripcion}</p>
                     <div className='flex gap-3 gap-y-[0px] flex-wrap' onMouseEnter={mouseEnterText} onMouseLeave={mouseLeaveSectionss} >
                       {project.tecnologias.map((tec,index) => {
                         return (

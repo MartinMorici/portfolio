@@ -22,19 +22,19 @@ const Header = () => {
           <nav className={`${navIsOpen ? 'flex' : 'hidden'} fixed z-50 bg-gris-oscuro nav:bg-transparent items-center nav:block svh nav:h-auto  inset-0 nav:inset-auto nav:static xl:absolute xl:left-1/2 xl:-translate-x-1/2 tracking-[-1px]`}>
             <ul className=' w-fit mx-auto flex flex-col nav:flex-row gap-12 text-[1.8rem]  nav:text-[1.1rem] whitespace-nowrap'>
               <li className='cursor-pointer group' onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
-                <span className='group-hover:-rotate-12 transition-all block'>// home</span>
+                <span className='group-hover:-rotate-12 transition-all block group-hover:text-amarillo'>// home</span>
               </li>
               <li className='cursor-pointer group' onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
-                <span className='group-hover:-rotate-12 transition-all block'>// about</span>
+                <span className='group-hover:-rotate-12 transition-all block group-hover:text-amarillo'>// about</span>
               </li>
               <li className='cursor-pointer group' onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
-                <span className='group-hover:-rotate-12 transition-all block'>// skills</span>
+                <span className='group-hover:-rotate-12 transition-all block group-hover:text-amarillo'>// skills</span>
               </li>
               <li className='cursor-pointer group' onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
-                <span className='group-hover:-rotate-12 transition-all block'>// projects</span>
+                <span className='group-hover:-rotate-12 transition-all block group-hover:text-amarillo'>// projects</span>
               </li>
               <li className='cursor-pointer group' onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
-                <span className='group-hover:-rotate-12 transition-all block'>// contact</span>
+                <span className='group-hover:-rotate-12 transition-all block group-hover:text-amarillo'>// contact</span>
               </li>
             </ul>
           </nav>
@@ -73,12 +73,11 @@ const Header = () => {
             autoplay
             loop
             src={scroll}
-            style={{ height: '50px', width: '50px', margin:'0 auto', display:'block', position:'absolute',bottom:'15%', left:'50%', transform:'translate(-50%,-50%)' }}
+            style={{ height: '50px', width: '50px', margin:'0 auto', display:'block', position:'absolute',bottom:'7%', left:'50%', transform:'translate(-50%,-50%)' }}
           >
             <Controls visible={false} buttons={['play', 'repeat', 'frame', 'debug']} />
           </Player>
 
-        <div className='bg-hero-gradient absolute bottom-0 h-[150px] z-[4] w-full' onMouseEnter={mouseEnterSections} onMouseLeave={mouseLeaveSections}></div>
     </header>
   )
 }

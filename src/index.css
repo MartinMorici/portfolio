@@ -64,8 +64,29 @@ html {
 }
 
 .svh {
-  height: 100svh;
+  height: 100vh;
 }
+
+@media screen and (max-width: 768px) {
+  .svh{
+    height:85vh;
+  }
+}
+
+textarea,
+input.plain-text, /* this is a class */
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+input[type=”email”],
+input[type=”tel”],
+input[type=”number”],
+.input-radio-checkbox {  /* this is a class */
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0;
+}
+
 
 @tailwind base;
 @tailwind components;

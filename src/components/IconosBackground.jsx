@@ -14,7 +14,7 @@ const IconosBackground = () => {
     <div className='absolute max-w-[1260px] w-full left-1/2 transform -translate-x-1/2 z-[1]' ref={ref}>
       <div className='relative flex flex-col items-center h-[300px] opacity-70 '>
         <VscBeaker
-          className='w-8 h-8 text-amarillo absolute top-[-250px] right-[20px] sm:static '
+          className='w-8 h-8 text-amarillo absolute top-[-120px] right-[20px] sm:static '
           style={{
             transform: isInView ? 'none' : 'translateY(200px)',
             opacity: isInView ? 1 : 0,
@@ -54,7 +54,7 @@ const IconosBackground = () => {
           }}
         />
         <FaToolbox
-          className='w-8 h-8 text-rosa absolute top-[-300px] sm:top-[6px] left-[20px] sm:left-[350px]'
+          className='w-8 h-8 text-rosa absolute top-[0px] sm:top-[6px] left-[20px] sm:left-[350px]'
           style={{
             transform: isInView ? 'none' : 'translateY(200px)',
             opacity: isInView ? 1 : 0,
@@ -78,7 +78,7 @@ const IconosBackground = () => {
           }}
         />
         <GiCommercialAirplane
-          className='w-8 h-8 text-celeste absolute bottom-[-350px] left-6 sm:-bottom-24 sm:right-60 sm:left-auto'
+          className='w-8 h-8 text-celeste absolute bottom-[-200px] left-36 sm:-bottom-24 sm:right-60 sm:left-auto'
           style={{
             transform: isInView ? 'none' : 'translateY(200px)',
             opacity: isInView ? 1 : 0,
@@ -86,7 +86,7 @@ const IconosBackground = () => {
           }}
         />
         <GiGearStickPattern
-          className='w-8 h-8 text-celeste absolute right-[320px] top-6'
+          className='w-8 h-8 text-celeste absolute right-[8px] top-[150px]'
           style={{
             transform: isInView ? 'none' : 'translateY(200px)',
             opacity: isInView ? 1 : 0,

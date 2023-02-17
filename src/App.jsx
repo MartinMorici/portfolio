@@ -1,5 +1,6 @@
 import { useContext } from "react"
 import About from "./components/About"
+import Contact from "./components/Contact"
 import Cursor from "./components/Cursor"
 import Header from "./components/Header"
 import Projects from "./components/Projects"
@@ -10,14 +11,15 @@ function App() {
   const {mouseEnterSections, mouseLeaveSections} = useContext(CursorContext)
 
   return (
-    <div className=" h-screen">
+    <div className="bg-hero-pattern">
       <Cursor />
       <Header  />
 
-      <div className="bg-gris-oscuro" onMouseEnter={mouseEnterSections} onMouseLeave={mouseLeaveSections}>
+      <div className="" onMouseEnter={mouseEnterSections} onMouseLeave={mouseLeaveSections}>
         <About />
         <Skills/>
         <Projects/> 
+        <Contact/>
       </div>
 
     </div>
