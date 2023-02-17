@@ -31,13 +31,14 @@ const {mouseEnterTitle, mouseEnterText, mouseLeaveSectionss} = useContext(Cursor
             <span className='group block w-fit' onMouseEnter={mouseEnterTitle} onMouseLeave={mouseLeaveSectionss}><button className='flex justify-center items-center text-white font-semibold font-poppins px-4 py-2 bg-violeta mt-8 rounded-full group-hover:-rotate-6 transition-all  ' >Descargar CV <CVIcon className='ml-3 w-5 h-[20px]'/> </button></span>
           </div>
    
-          <div onMouseEnter={mouseEnterTitle} onMouseLeave={mouseLeaveSectionss}>
+          <div className='hidden lg:block' onMouseEnter={mouseEnterTitle} onMouseLeave={mouseLeaveSectionss}>
             <Player
-            
+              className='lg:w-[500px] lg:h-[500px] xl:w-[600px] xl:h-[600px]'
               autoplay
               loop
               src={sphere}
-              style={{ height: '600px', width: '600px', margin:'0 auto', display:'block' }}
+              
+              style={{ margin:'0 auto', display:'block' }}
             >
               <Controls visible={false} buttons={['play', 'repeat', 'frame', 'debug']} />
             </Player>

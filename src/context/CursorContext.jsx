@@ -20,6 +20,11 @@ const CursorProvider = (props) => {
     setHoverLarge('oculto');
   };
 
+  const mouseEnterButton = () => {
+    setHover('button');
+    setHoverLarge('oculto');
+  }
+
   const mouseEnterText = () => {
     setHover('textSections');
     setHoverLarge('oculto');
@@ -40,7 +45,7 @@ const CursorProvider = (props) => {
     setHover('default');
   };
 
-  return <CursorContext.Provider value={{ mouseLeaveSections, mouseEnterSections, mouseEnter, mouseLeave, mouseEnterSocials, mouseLeaveSectionss, mouseEnterText, mouseEnterTitle, hover, hoverLarge, setHoverLarge, setHover }}>{props.children}</CursorContext.Provider>;
+  return <CursorContext.Provider value={{ mouseLeaveSections, mouseEnterSections, mouseEnter, mouseLeave, mouseEnterSocials, mouseLeaveSectionss, mouseEnterText, mouseEnterTitle, mouseEnterButton, hover, hoverLarge, setHoverLarge, setHover }}>{props.children}</CursorContext.Provider>;
 };
 
 export default CursorProvider;

@@ -1,6 +1,70 @@
-html{
-    font-family: 'Poppins', sans-serif;
-    font-family: 'Roboto Mono', monospace;
+html {
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto Mono', monospace;
+}
+::selection {
+    background: #3500D3;
+  }
+  .card{
+    border: 1px solid rgba(255, 255, 255, .25);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+  
+    backdrop-filter: blur(15px);
+  }
+.burger {
+  display: flex;
+  outline: none;
+  width: 32px;
+  border: 0px;
+  padding: 0px;
+  background: transparent;
+  transition: all 250ms ease-out;
+  cursor: pointer;
+}
+
+.barraDos {
+  content: '';
+  width: 32px;
+  height: 3px;
+  position: absolute;
+  background: #fbfbfb;
+  transition: all 250ms ease-out;
+  will-change: transform;
+}
+.barraUno {
+  content: '';
+  width: 20px;
+  height: 3px;
+  top: -4px;
+  position: absolute;
+  right: 0;
+  background: #fbfbfb;
+  transition: all 250ms ease-out;
+  will-change: transform;
+}
+
+.barraUno {
+  transform: translateY(5px);
+}
+
+.barraDos {
+  transform: translateY(14px);
+}
+
+.active .barraUno {
+  transform: translateY(0) rotate(45deg);
+  width: 32px;
+  top: 0px;
+}
+
+.active .barraDos {
+  transform: translateY(0) rotate(-45deg);
+}
+
+.svh {
+  height: 100svh;
 }
 
 @tailwind base;
