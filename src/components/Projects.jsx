@@ -38,12 +38,12 @@ const Projects = () => {
                   </div>
                   <div className='flex gap-5 mt-8 font-roboto flex-wrap'>
                     <a href={project.website} target='_blank' className='group'  onMouseEnter={mouseEnterButton} onMouseLeave={mouseLeaveSectionss}>
-                      <button className='flex gap-3 px-4 py-1 text-[18px] sm:text-[20px] rounded-[2px] items-center bg-amarillo font-bold group-hover:-rotate-[9deg] transition-all '>
+                      <button className='flex gap-3 px-4 py-1 text-[18px] sm:text-[20px] rounded-[2px] items-center bg-amarillo font-bold group-hover:scale-105 md:group-hover:scale-100 md:group-hover:-rotate-[9deg] transition-all '>
                         Website <FaLink className='w-[25px] h-[25px]' />
                       </button>
                     </a>
                     <a href={project.code} target='_blank' className='group'  onMouseEnter={mouseEnterButton} onMouseLeave={mouseLeaveSectionss}>
-                      <button className='flex gap-3 px-5 py-1 text-[18px] sm:text-[20px] rounded-[2px] items-center bg-amarillo font-bold group-hover:-rotate-[9deg] transition-all'>
+                      <button className='flex gap-3 px-5 py-1 text-[18px] sm:text-[20px] rounded-[2px] items-center bg-amarillo font-bold group-hover:scale-105 md:group-hover:scale-100 md:group-hover:-rotate-[9deg] transition-all'>
                         Code <FaGithub className='w-[25px] h-[25px]' />
                       </button>
                     </a>

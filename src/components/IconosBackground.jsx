@@ -14,7 +14,7 @@ const IconosBackground = () => {
     <div className='absolute max-w-[1260px] w-full left-1/2 transform -translate-x-1/2 z-[1]' ref={ref}>
       <div className='relative flex flex-col items-center h-[300px] opacity-70 '>
         <VscBeaker
-          className='w-8 h-8 text-amarillo absolute top-[-120px] right-[20px] sm:static '
+          className='w-8 h-8 text-amarillo absolute top-[-120px] right-[20px] md:static '
           style={{
             transform: isInView ? 'none' : 'translateY(200px)',
             opacity: isInView ? 1 : 0,
@@ -22,7 +22,7 @@ const IconosBackground = () => {
           }}
         />
         <AiFillStar
-          className='w-8 h-8 text-amarillo absolute left-[22px] top-[-100px]  sm:left-[-22px] sm:top-32 '
+          className='w-8 h-8 text-amarillo absolute left-[22px] top-[-100px]  md:left-[-22px] md:top-32 '
           style={{
             transform: isInView ? 'none' : 'translateY(200px)',
             opacity: isInView ? 1 : 0,
@@ -30,7 +30,7 @@ const IconosBackground = () => {
           }}
         />
         <IoHammerSharp
-          className='w-8 h-8 text-naranja absolute right-0'
+          className='w-8 h-8 text-naranja absolute right-0 md:right-64 md:top-5'
           style={{
             transform: isInView ? 'none' : 'translateY(200px)',
             opacity: isInView ? 1 : 0,
@@ -38,7 +38,7 @@ const IconosBackground = () => {
           }}
         />
         <FaTools
-          className='w-8 h-8 text-naranja absolute right-[18px] bottom-[-200px] sm:right-auto  sm:-bottom-36 '
+          className='w-8 h-8 text-naranja absolute right-[18px] bottom-[-200px] md:right-auto  md:-bottom-36 '
           style={{
             transform: isInView ? 'none' : 'translateY(200px)',
             opacity: isInView ? 1 : 0,
@@ -46,7 +46,7 @@ const IconosBackground = () => {
           }}
         />
         <GiRocket
-          className='w-8 h-8 text-rosa absolute left-[5px] -bottom-32 sm:left-20'
+          className='w-8 h-8 text-rosa absolute left-[5px] -bottom-32 md:left-20'
           style={{
             transform: isInView ? 'none' : 'translateY(200px)',
             opacity: isInView ? 1 : 0,
@@ -54,7 +54,7 @@ const IconosBackground = () => {
           }}
         />
         <FaToolbox
-          className='w-8 h-8 text-rosa absolute top-[0px] sm:top-[6px] left-[20px] sm:left-[350px]'
+          className='w-8 h-8 text-rosa absolute top-[0px] md:top-[6px] left-[20px] md:left-[350px]'
           style={{
             transform: isInView ? 'none' : 'translateY(200px)',
             opacity: isInView ? 1 : 0,
@@ -70,7 +70,7 @@ const IconosBackground = () => {
           }}
         />
         <IoColorWand
-          className='w-8 h-8 text-violeta absolute  left-[10px] bottom-20 sm:bottom-[-120px] sm:left-[350px]'
+          className='w-8 h-8 text-violeta absolute  left-[10px] bottom-20 md:bottom-[-120px] md:left-[350px]'
           style={{
             transform: isInView ? 'none' : 'translateY(200px)',
             opacity: isInView ? 1 : 0,
@@ -78,7 +78,7 @@ const IconosBackground = () => {
           }}
         />
         <GiCommercialAirplane
-          className='w-8 h-8 text-celeste absolute bottom-[-200px] left-36 sm:-bottom-24 sm:right-60 sm:left-auto'
+          className='w-8 h-8 text-celeste absolute bottom-[-200px] left-36 md:-bottom-24 md:right-60 md:left-auto'
           style={{
             transform: isInView ? 'none' : 'translateY(200px)',
             opacity: isInView ? 1 : 0,

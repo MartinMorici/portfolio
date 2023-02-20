@@ -32,7 +32,7 @@ const {mouseEnterTitle, mouseEnterText, mouseLeaveSectionss, mouseEnterButton} =
               <br />
               Estoy buscando mi primer puesto como desarrollador front-end en el que pueda <span className="font-semibold text-amarillo">aportar, aprender <span className="text-white font-normal">y</span> crecer</span>. Si tenes alguna propuesta que concuerde con mis habilidades no dudes en <span className="font-semibold text-amarillo underline">contactarme</span>!
             </p>
-            <a href={CV} download="CV Martín Morici"><span className='group block w-fit' onMouseEnter={mouseEnterTitle} onMouseLeave={mouseLeaveSectionss}><button className='flex justify-center items-center text-white font-semibold font-poppins px-4 py-2 bg-violeta mt-8 rounded-full group-hover:-rotate-6 transition-all  ' >Descargar CV <CVIcon className='ml-3 w-5 h-[20px]'/> </button></span></a>
+            <a href={CV} download="CV Martín Morici"><span className='group block w-fit' onMouseEnter={mouseEnterTitle} onMouseLeave={mouseLeaveSectionss}><button className='flex justify-center items-center text-white font-semibold font-poppins px-4 py-2 bg-violeta mt-8 rounded-full group-hover:scale-105 md:group-hover:scale-100 md:group-hover:-rotate-6 transition-all' >Descargar CV <CVIcon className='ml-3 w-5 h-[20px]'/> </button></span></a>
           </div>
    
           <div className='hidden lg:block' onMouseEnter={mouseEnterTitle} onMouseLeave={mouseLeaveSectionss}>

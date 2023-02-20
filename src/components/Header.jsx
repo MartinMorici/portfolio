@@ -22,19 +22,19 @@ const Header = () => {
           <nav className={`${navIsOpen ? 'flex' : 'hidden'} fixed z-50 bg-gris-oscuro nav:bg-transparent items-center nav:block svh nav:h-auto  inset-0 nav:inset-auto nav:static xl:absolute xl:left-1/2 xl:-translate-x-1/2 tracking-[-1px]`}>
             <ul className=' w-fit mx-auto flex flex-col nav:flex-row gap-12 text-[1.8rem]  nav:text-[1.1rem] whitespace-nowrap'>
               <li className='cursor-pointer group' onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
-                <span className='group-hover:-rotate-12 transition-all block group-hover:text-amarillo'>// home</span>
+                <span className='md:group-hover:-rotate-12 transition-all block group-hover:text-amarillo'>// home</span>
               </li>
               <li className='cursor-pointer group' onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
-                <span className='group-hover:-rotate-12 transition-all block group-hover:text-amarillo'>// about</span>
+                <span className='md:group-hover:-rotate-12 transition-all block group-hover:text-amarillo'>// about</span>
               </li>
               <li className='cursor-pointer group' onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
-                <span className='group-hover:-rotate-12 transition-all block group-hover:text-amarillo'>// skills</span>
+                <span className='md:group-hover:-rotate-12 transition-all block group-hover:text-amarillo'>// skills</span>
               </li>
               <li className='cursor-pointer group' onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
-                <span className='group-hover:-rotate-12 transition-all block group-hover:text-amarillo'>// projects</span>
+                <span className='md:group-hover:-rotate-12 transition-all block group-hover:text-amarillo'>// projects</span>
               </li>
               <li className='cursor-pointer group' onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
-                <span className='group-hover:-rotate-12 transition-all block group-hover:text-amarillo'>// contact</span>
+                <span className='md:group-hover:-rotate-12 transition-all block group-hover:text-amarillo'>// contact</span>
               </li>
             </ul>
           </nav>
