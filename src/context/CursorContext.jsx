@@ -6,6 +6,9 @@ const CursorProvider = (props) => {
   const [hover, setHover] = useState('default');
   const [hoverLarge, setHoverLarge] = useState('default');
 
+  const reveal = { viewport: { once: true }, initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 }, transition: { type: 'spring', duration: 0.5 } };
+  const socials = { viewport: { once: true }, initial: { opacity: 0, y: 40 }, whileInView: { opacity: 1, y: 0 }};
+
   const mouseEnterSections = () => {
     setHoverLarge('sections');
     setHover('sections');
@@ -23,7 +26,7 @@ const CursorProvider = (props) => {
   const mouseEnterButton = () => {
     setHover('button');
     setHoverLarge('oculto');
-  }
+  };
 
   const mouseEnterText = () => {
     setHover('textSections');
@@ -45,7 +48,7 @@ const CursorProvider = (props) => {
     setHover('default');
   };
 
-  return <CursorContext.Provider value={{ mouseLeaveSections, mouseEnterSections, mouseEnter, mouseLeave, mouseEnterSocials, mouseLeaveSectionss, mouseEnterText, mouseEnterTitle, mouseEnterButton, hover, hoverLarge, setHoverLarge, setHover }}>{props.children}</CursorContext.Provider>;
+  return <CursorContext.Provider value={{ mouseLeaveSections, mouseEnterSections, mouseEnter, mouseLeave, mouseEnterSocials, mouseLeaveSectionss, mouseEnterText, mouseEnterTitle, mouseEnterButton, hover, hoverLarge, setHoverLarge, setHover, reveal,socials }}>{props.children}</CursorContext.Provider>;
 };
 
 export default CursorProvider;
