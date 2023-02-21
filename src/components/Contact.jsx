@@ -47,14 +47,14 @@ const Contact = () => {
                   </span>
                 </motion.h2>
                 <section className='p-4 flex flex-col sm:flex-row gap-12'>
-                    <motion ref={form} onSubmit={sendEmail} className='flex flex-col sm:max-w-[50%] w-full  text-white text-xl  '  >
+                    <form ref={form} onSubmit={sendEmail} className='flex flex-col sm:max-w-[50%] w-full  text-white text-xl  '  >
                         <motion.input required className='bg-transparent border-b border-white outline-none mb-4 max-w-[450px] focus:border-amarillo placeholder-white  text py-2' type="text" name='asunto' placeholder='Subject' {...reveal}  />
                         <motion.input required className='bg-transparent border-b border-white outline-none mb-4 max-w-[450px] focus:border-amarillo placeholder-white  text py-2' type="text" name='user_name' placeholder='Name' {...reveal}   />
                         <motion.input required className='bg-transparent border-b border-white outline-none max-w-[450px] focus:border-amarillo placeholder-white py-2' type="email" name="user_email" placeholder='Email' {...reveal}  />
                         <motion.label className='mt-8 mb-1 block' name="message" htmlFor="message" {...reveal}>Message</motion.label>
                         <motion.textarea required className='bg-[#242329] outline-none p-4 border-b-2 text-lg focus:border-amarillo'  name="message" id="message" cols="30" rows="10" {...reveal}  ></motion.textarea>
                         <div  className='group' onMouseEnter={mouseEnterButton} onMouseLeave={mouseLeaveSectionss}><input type="submit" value="Send" className='mr-auto mt-8 bg-amarillo text-black sm:active:scale-110 font-semibold py-1 px-8 rounded-md sm:group-hover:rotate-[-12deg] transition-all' /></div>
-                    </motion>
+                    </form>
                     <motion.article {...reveal} >
                         <motion.h3 className='text-white text-2xl font-roboto font-semibold' {...reveal}>Información de Contacto</motion.h3>
                         <motion.h3 className='mt-2 font-light text-white' {...reveal}>Si queres contactarte conmigo no dudes en hacerlo! Te dejo acá todos los links y redes disponibles.</motion.h3>

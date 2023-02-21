@@ -22,31 +22,31 @@ const Header = () => {
           </div>
           <nav className={`${navIsOpen ? 'flex' : 'hidden'} fixed z-50 bg-gris-oscuro pt-20 nav:pt-0 nav:bg-transparent  nav:block h-screen nav:h-auto  inset-0 nav:inset-auto nav:static xl:absolute xl:left-1/2 xl:-translate-x-1/2 tracking-[-1px]`}>
             <ul className=' w-fit mx-auto flex flex-col nav:flex-row gap-12 text-[1.8rem]  nav:text-[1.1rem] whitespace-nowrap'>
-              <a href="#home"  onClick={() => {setNavIsOpen(false)}}>
                 <li className='cursor-pointer group' onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
-                  <span className='md:group-hover:-rotate-12 group-hover:scale-105 group-hover:rotate-0 transition-all block group-hover:text-amarillo'>// home</span>
+                  <a href="#home"  onClick={() => {setNavIsOpen(false)}}>
+                      <span className='md:group-hover:-rotate-12 group-hover:scale-105 group-hover:rotate-0 transition-all block group-hover:text-amarillo'>// home</span>
+                  </a>
                 </li>
-              </a>
-              <a href="#about" onClick={() => {setNavIsOpen(false)}}>
                 <li className='cursor-pointer group' onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
-                  <span className='md:group-hover:-rotate-12 group-hover:scale-105 group-hover:rotate-0 transition-all block group-hover:text-amarillo'>// about</span>
+                  <a href="#about" onClick={() => {setNavIsOpen(false)}}>
+                      <span className='md:group-hover:-rotate-12 group-hover:scale-105 group-hover:rotate-0 transition-all block group-hover:text-amarillo'>// about</span>
+                  </a>
                 </li>
-              </a>
-              <a href="#skills" onClick={() => {setNavIsOpen(false)}}>
                 <li className='cursor-pointer group' onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
-                  <span className='md:group-hover:-rotate-12 group-hover:scale-105 group-hover:rotate-0 transition-all block group-hover:text-amarillo'>// skills</span>
+                  <a href="#skills" onClick={() => {setNavIsOpen(false)}}>
+                      <span className='md:group-hover:-rotate-12 group-hover:scale-105 group-hover:rotate-0 transition-all block group-hover:text-amarillo'>// skills</span>
+                  </a>
                 </li>
-              </a>
-              <a href="#projects" onClick={() => {setNavIsOpen(false)}}>
                 <li className='cursor-pointer group' onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
-                  <span className='md:group-hover:-rotate-12 group-hover:scale-105 group-hover:rotate-0 transition-all block group-hover:text-amarillo'>// projects</span>
+                  <a href="#projects" onClick={() => {setNavIsOpen(false)}}>
+                      <span className='md:group-hover:-rotate-12 group-hover:scale-105 group-hover:rotate-0 transition-all block group-hover:text-amarillo'>// projects</span>
+                  </a>
                 </li>
-              </a>
-              <a href="#contact" onClick={() => {setNavIsOpen(false)}}>
                 <li className='cursor-pointer group' onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
-                  <span className='md:group-hover:-rotate-12 group-hover:scale-105 group-hover:rotate-0 transition-all block group-hover:text-amarillo'>// contact</span>
+                  <a href="#contact" onClick={() => {setNavIsOpen(false)}}>
+                      <span className='md:group-hover:-rotate-12 group-hover:scale-105 group-hover:rotate-0 transition-all block group-hover:text-amarillo'>// contact</span>
+                  </a>
                 </li>
-              </a>
             </ul>
           </nav>
         </div>

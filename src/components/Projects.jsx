@@ -34,7 +34,7 @@ const Projects = () => {
                     <motion.div className='block sm:hidden max-w-[600px] w-full order-[-1] lg:order-1 rounded-sm' {...reveal} onMouseEnter={mouseEnterTitle} onMouseLeave={mouseLeaveSectionss}>
                       <img className='rounded-sm' src={project.imagen} alt={project.nombre} />
                     </motion.div>
-                    <motion.p className='mt-2 sm:mt-0 font-poppins text-[#b8b9bb] sm:leading-[1.7] text-[16px] ' {...reveal} onMouseEnter={mouseEnterText} onMouseLeave={mouseLeaveSectionss}>
+                    <motion.p className='mt-2 sm:mt-0 font-poppins text-[#e4e4e4] sm:leading-[1.7] text-[16px] ' {...reveal} onMouseEnter={mouseEnterText} onMouseLeave={mouseLeaveSectionss}>
                       {project.descripcion}
                     </motion.p>
                     <div className='flex gap-3 gap-y-[0px] flex-wrap' onMouseEnter={mouseEnterText} onMouseLeave={mouseLeaveSectionss}>
