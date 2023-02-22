@@ -1,12 +1,12 @@
 import React from 'react';
-import Container from './Container';
-import {ReactComponent as CVIcon} from '../assets/cv.svg'
-import { Player, Controls } from '@lottiefiles/react-lottie-player';
-import sphere from '../assets/sphere.json'
 import { useContext } from 'react';
 import { CursorContext } from '../context/CursorContext';
-import CV from '../assets/cv-martin-morici.pdf'
 import { motion } from 'framer-motion';
+import { Player, Controls } from '@lottiefiles/react-lottie-player';
+import {ReactComponent as CVIcon} from '../assets/cv.svg'
+import sphere from '../assets/sphere.json'
+import CV from '../assets/cv-martin-morici.pdf'
+import Container from './Container';
 
 const About = () => {
 const {mouseEnterTitle, mouseEnterText, mouseLeaveSectionss, mouseEnterButton,reveal} = useContext(CursorContext)  
@@ -19,9 +19,9 @@ const {mouseEnterTitle, mouseEnterText, mouseLeaveSectionss, mouseEnterButton,re
             <motion.h2 className='mt-[12rem] lg:mt-[8rem] w-fit leading-[0.95] text-white font-poppins font-semibold text-[55px] sm:text-[75px] group ' 
             {...reveal}
             onMouseEnter={mouseEnterButton} onMouseLeave={mouseLeaveSectionss}>
-              <span className='text-[30px] sm:text-[40px]'>//</span> <span className='relative z-[1]'><span className='group-hover:before:h-[45px] before:transition-all before:z-[-1]  before:w-[104%] before:absolute before:bottom-[18px] before:h-[12px] sm:before:h-[15px] before:bg-azul'>About</span></span>
+              <span className='text-[30px] sm:text-[40px]'>//</span> <span className='relative z-[1]'><span className='group-hover:before:h-[45px] before:transition-all before:z-[-1]  before:w-[104%] before:absolute before:bottom-[18px] before:h-[12px] sm:before:h-[15px] before:bg-azul'>Sobre</span></span>
               <br />
-              <span className='text-[30px] sm:text-[40px]'>//</span> <span className='relative z-[1]'><span className='group-hover:before:h-[45px] before:transition-all before:z-[-1]  before:w-[104%] before:absolute before:bottom-[18px] before:h-[12px] sm:before:h-[15px] before:bg-azul'>Me</span></span>
+              <span className='text-[30px] sm:text-[40px]'>//</span> <span className='relative z-[1]'><span className='group-hover:before:h-[45px] before:transition-all before:z-[-1]  before:w-[104%] before:absolute before:bottom-[18px] before:h-[12px] sm:before:h-[15px] before:bg-azul'>Mí</span></span>
             </motion.h2>
             <motion.p className='max-w-[644px] font-roboto text-white leading-[1.7] mt-7 '  {...reveal} onMouseEnter={mouseEnterText} onMouseLeave={mouseLeaveSectionss}>
               Hola! Mi nombre es Martín y soy un apasionado del desarrollo web. Me considero un frontend developer <span className='font-semibold text-amarillo'>creativo</span> y <span className='font-semibold text-amarillo'>dedicado</span>, con buen ojo para el diseño y enfocado en crear experiencias de usuario agradables y accesibles.
@@ -29,7 +29,7 @@ const {mouseEnterTitle, mouseEnterText, mouseLeaveSectionss, mouseEnterButton,re
 
               <br />
               <motion.p className='max-w-[644px] font-roboto text-white leading-[1.7] '  {...reveal} onMouseEnter={mouseEnterText} onMouseLeave={mouseLeaveSectionss}>
-              Estudié 3 años <span className="text-amarillo font-semibold">Ingeniería en Sitemas</span>. En mi paso por la universidad aprendí muchísimo y aprobé muchas materias relevantes, matemáticas y de programación. Pueden encontrar un poco más de infofrmación acerca de esto en mi CV. 
+              Estudié 3 años <span className="text-amarillo font-semibold">Ingeniería en Sistemas</span>. En mi paso por la universidad aprendí muchísimo y aprobé muchas materias relevantes, matemáticas y de programación. Pueden encontrar un poco más de información acerca de esto en mi CV. 
               </motion.p>
    
               <br />

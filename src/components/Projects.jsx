@@ -16,10 +16,9 @@ const Projects = () => {
   return (
     <main className='flex items-center z-20 bg-gris-oscuro ' id='projects'>
       <Container>
-        <motion.h2 className='leading-[0.95] text-white font-poppins font-semibold text-[55px] sm:text-[75px] w-fit group' {...reveal} onMouseEnter={mouseEnterButton} onMouseLeave={mouseLeaveSectionss}>
-          <span className='text-[30px] sm:text-[40px]'>//</span>
-          <span className='relative z-[1]'>
-            <span className='group-hover:before:h-[45px] before:transition-all before:z-[-1]  before:w-[104%] before:absolute before:bottom-[18px]  before:h-[12px] sm:before:h-[15px] before:bg-[#00BF8F]'>Projects</span>
+        <motion.h2 className='leading-[0.95] text-white font-poppins font-semibold text-[40px] sm:text-[75px] w-fit group' {...reveal} onMouseEnter={mouseEnterButton} onMouseLeave={mouseLeaveSectionss}>
+          <span className='text-[25px] sm:text-[40px]'>//</span><span className='relative z-[1]'>
+            <span className='ml-[17px] group-hover:before:h-[36px] sm:group-hover:before:h-[45px] before:transition-all before:z-[-1]  before:w-[96%] before:absolute before:bottom-[10px] sm:before:bottom-[18px]  before:h-[12px] sm:before:h-[15px] before:bg-[#00BF8F]'>Proyectos</span>
           </span>
         </motion.h2>
         <section className='mt-8 '>
@@ -51,12 +50,12 @@ const Projects = () => {
                   <div className='flex gap-5 mt-8 font-roboto flex-wrap'>
                     <a href={project.website} target='_blank' className='group' onMouseEnter={mouseEnterButton} onMouseLeave={mouseLeaveSectionss}>
                       <motion.button className='flex gap-3 px-4 py-1 text-[18px] sm:text-[20px] rounded-[2px] items-center bg-amarillo font-bold ' {...atributos}>
-                        Website <FaLink className='w-[25px] h-[25px]' />
+                        Sitio web <FaLink className='w-[25px] h-[25px]' />
                       </motion.button>
                     </a>
                     <a href={project.code} target='_blank' className='group' onMouseEnter={mouseEnterButton} onMouseLeave={mouseLeaveSectionss}>
                       <motion.button className='flex gap-3 px-5 py-1 text-[18px] sm:text-[20px] rounded-[2px] items-center bg-amarillo font-bold'  {...atributos}>
-                        Code <FaGithub className='w-[25px] h-[25px]' />
+                        Código <FaGithub className='w-[25px] h-[25px]' />
                       </motion.button>
                     </a>
                   </div>
