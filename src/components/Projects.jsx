@@ -12,7 +12,7 @@ const Projects = () => {
   const atributos = isMobile ? {whileTap:{scale:1.1,transition:0.2}, viewport:{ once: true }, initial:{ opacity: 0, y: 50 }, whileInView:{ opacity: 1, y: 0}, transition:{ type: 'easeInOut' }} : {
     whileHover:{rotate:'-9deg',transition:0.2}, viewport:{ once: true }, initial:{ opacity: 0, y: 50 }, whileInView:{ opacity: 1, y: 0 }, transition:{ type: 'easeInOut' }
   }
-  const { mouseEnterTitle, mouseLeaveSectionss, mouseEnterText, mouseEnterButton,reveal } = useContext(CursorContext);
+  const { mouseEnterTitle, mouseLeaveSectionss, mouseEnterText, mouseEnterButton,reveal, revealTechs } = useContext(CursorContext);
   return (
     <main className='flex items-center z-20 bg-gris-oscuro ' id='projects'>
       <Container>
@@ -39,7 +39,7 @@ const Projects = () => {
                     <div className='flex gap-3 gap-y-[0px] flex-wrap' onMouseEnter={mouseEnterText} onMouseLeave={mouseLeaveSectionss}>
                       {project.tecnologias.map((tec, index) => {
                         return (
-                          <motion.div key={index} className='flex items-center mt-4 bg-white font-semibold text-black rounded-[4px] font-poppins px-3 py-1 ' viewport={{ once: true }} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ type: 'spring', delay: index * 0.04 }}>
+                          <motion.div key={index} className='flex items-center mt-4 bg-white font-semibold text-black rounded-[4px] font-poppins px-3 py-1 ' {...revealTechs}>
                             <img className='h-[20px]' src={tec.imagen} alt={`${tec.nombre} imagen`} />
                             <h4 className='pl-2 text-[15px]'>{tec.nombre}</h4>
                           </motion.div>
