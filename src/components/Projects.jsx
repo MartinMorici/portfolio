@@ -9,7 +9,7 @@ import Container from './Container';
 
 const Projects = () => {
   const isMobile = window.innerWidth < 768;
-  const atributos = isMobile ? {whileTap:{scale:1.1,transition:0.2}, viewport:{ once: true }, initial:{ opacity: 0, y: 50 }, whileInView:{ opacity: 1, y: 0}, transition:{ type: 'easeInOut' }} : {
+  const atributos = isMobile ? {whileTap:{scale:1.1,transition:0.2}, transition:{ type: 'easeInOut' }} : {
     whileHover:{rotate:'-9deg',transition:0.2}, viewport:{ once: true }, initial:{ opacity: 0, y: 50 }, whileInView:{ opacity: 1, y: 0 }, transition:{ type: 'easeInOut' }
   }
   const { mouseEnterTitle, mouseLeaveSectionss, mouseEnterText, mouseEnterButton,reveal, revealTechs } = useContext(CursorContext);

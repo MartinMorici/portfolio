@@ -8,12 +8,15 @@ const CursorProvider = (props) => {
   let reveal;
   let revealSkills;
   let revealTechs;
+  let revealSocials;
+  let index;
+  
   if(window.innerWidth > 600) {
      reveal = { viewport: { once: true }, initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 }, transition: { type: 'spring', duration: 0.5 } };
      revealSkills = {viewport:{once:true}, initial:{opacity:0, y:50}, whileInView:{opacity:1,y:0}, transition:{type:'spring', delay:index * .04}}
      revealTechs ={viewport:{ once: true }, initial:{ opacity: 0, y: 50 }, whileInView:{ opacity: 1, y: 0 }, transition:{ type: 'spring', delay: index * 0.04 }}
+     revealSocials = { viewport: { once: true }, initial: { opacity: 0, y: 40 }, whileInView: { opacity: 1, y: 0 }};
   }
-  const socials = { viewport: { once: true }, initial: { opacity: 0, y: 40 }, whileInView: { opacity: 1, y: 0 }};
 
   const mouseEnterSections = () => {
     setHoverLarge('sections');
@@ -54,7 +57,7 @@ const CursorProvider = (props) => {
     setHover('default');
   };
 
-  return <CursorContext.Provider value={{ mouseLeaveSections, mouseEnterSections, mouseEnter, mouseLeave, mouseEnterSocials, mouseLeaveSectionss, mouseEnterText, mouseEnterTitle, mouseEnterButton, hover, hoverLarge, setHoverLarge, setHover, reveal, socials, revealSkills, revealTechs }}>{props.children}</CursorContext.Provider>;
+  return <CursorContext.Provider value={{ mouseLeaveSections, mouseEnterSections, mouseEnter, mouseLeave, mouseEnterSocials, mouseLeaveSectionss, mouseEnterText, mouseEnterTitle, mouseEnterButton, hover, hoverLarge, setHoverLarge, setHover, reveal, revealSocials, revealSkills, revealTechs }}>{props.children}</CursorContext.Provider>;
 };
 
 export default CursorProvider;

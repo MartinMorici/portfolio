@@ -7,11 +7,10 @@ import scroll from '../assets/scroll';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 const Header = () => {
-  const { mouseEnterSocials, mouseEnter, mouseLeave, socials } = useContext(CursorContext);
+  const { mouseEnterSocials, mouseEnter, mouseLeave, revealSocials } = useContext(CursorContext);
   const [navIsOpen, setNavIsOpen] = useState(false);
 
-
- 
+  const isMobile = window.innerWidth <= 600;
 
   return (
     <header className='bg-hero-pattern svh text-white flex justify-center items-center' id='home'>
@@ -91,28 +90,28 @@ const Header = () => {
           <h1 className='text-[40px] leading-tight  sm:text-[7.5vw] sm:leading-snug font-semibold' onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
             MARTÍN MORICI
           </h1>
-          <motion.h2 className='text-[19px] sm:text-[28px] sm:mt-[-20px] font-normal tracking-widest w-fit mx-auto font-roboto' viewport={{ once: true }} initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ type: 'easeInOut', duration: 0.8 }} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
+          <motion.h2 className='text-[19px] sm:text-[28px] sm:mt-[-20px] font-normal tracking-widest w-fit mx-auto font-roboto' viewport={{ once: true }} initial={{ opacity: 0, y: 40 }} animate={ isMobile ? {} : { opacity: 1, y: 0 }} transition={{ type: 'easeInOut', duration: 0.8 }}  onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
             FRONT END DEVELOPER
           </motion.h2>
         </div>
 
         <ul onMouseEnter={mouseEnterSocials} onMouseLeave={mouseLeave} className=' relative top-8 sm:mt-0 sm:absolute sm:top-1/2  sm:-translate-y-1/2 flex sm:flex-col left-0 gap-6 px-10'>
-          <motion.li {...socials} transition={{ type: 'spring', duration: 1 * 1.5 }} className='group'>
+          <motion.li {...revealSocials} transition={isMobile ? {} : { type: 'spring', duration: 1 * 1.5 }} className='group'>
             <a href='https://www.linkedin.com/in/martinmorici/' target='_blank'>
               <FaLinkedinIn className='w-7 h-7 cursor-pointer text-amarillo group-hover:rotate-12 transition-all' />
             </a>
           </motion.li>
-          <motion.li {...socials} transition={{ type: 'spring', duration: 1 * 1.9 }} className='group'>
+          <motion.li {...revealSocials} transition={isMobile ? {} : { type: 'spring', duration: 1 * 1.9 }} className='group'>
             <a href='https://github.com/MartinMorici' target='_blank'>
               <FaGithub className='w-7 h-7 cursor-pointer text-amarillo group-hover:rotate-12  transition-all' />
             </a>
           </motion.li>
-          <motion.li {...socials} transition={{ type: 'spring', duration: 1 * 2.3 }} className='group'>
+          <motion.li {...revealSocials} transition={isMobile ? {} : { type: 'spring', duration: 1 * 2.3 }} className='group'>
             <a href='https://wa.me/5493416913966' target='_blank'>
               <FaWhatsapp className='w-7 h-7 cursor-pointer text-amarillo group-hover:rotate-12 transition-all' />
             </a>
           </motion.li>
-          <motion.li {...socials} transition={{ type: 'spring', duration: 1 * 2.6 }} className='group'>
+          <motion.li {...revealSocials} transition={isMobile ? {} : { type: 'spring', duration: 1 * 2.6 }} className='group'>
             <a href='mailto:martinmorici3@gmail.com' target='_blank'>
               <FaEnvelope className='w-7 h-7 cursor-pointer text-amarillo group-hover:rotate-12 transition-all' />
             </a>
