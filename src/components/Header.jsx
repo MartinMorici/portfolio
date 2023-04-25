@@ -13,7 +13,7 @@ const Header = () => {
   const isMobile = window.innerWidth <= 600;
 
   return (
-    <header className='bg-hero-pattern svh text-white flex justify-center items-center' id='home'>
+    <header className=' relative bg-hero-pattern svh text-white flex justify-center items-center max-w-[1800px] mx-auto' id='home'>
       <div className={`absolute z-[500] w-full font-medium font-roboto flex justify-between xl:justify-start h-32 items-center px-5 nav:px-10 top-0 `}>
         <div className='text-[1.4em]' onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
         MMartin <span className='relative left-[-4px] inline-block pr-1 py-3 text-black bg-white'>.site</span>
