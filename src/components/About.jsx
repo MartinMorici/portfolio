@@ -20,9 +20,7 @@ const isMobile = window.innerWidth <= 600;
             <motion.h2 className='mt-[12rem] lg:mt-[8rem] w-fit leading-[0.95] text-white font-poppins font-semibold text-[55px] sm:text-[75px] group ' 
             {...reveal}
             onMouseEnter={mouseEnterButton} onMouseLeave={mouseLeaveSectionss}>
-              <span className='text-[30px] sm:text-[40px]'>//</span> <span className='relative z-[1]'><span className='group-hover:before:h-[45px] before:transition-all before:z-[-1]  before:w-[104%] before:absolute before:bottom-[18px] before:h-[12px] sm:before:h-[15px] before:bg-azul'>Sobre</span></span>
-              <br />
-              <span className='text-[30px] sm:text-[40px]'>//</span> <span className='relative z-[1]'><span className='group-hover:before:h-[45px] before:transition-all before:z-[-1]  before:w-[104%] before:absolute before:bottom-[18px] before:h-[12px] sm:before:h-[15px] before:bg-azul'>Mí</span></span>
+              <span className='text-[30px] sm:text-[40px]'>//</span> <span className='relative z-[1]'><span className='group-hover:before:h-[45px] before:transition-all before:z-[-1]  before:w-[104%] before:absolute before:bottom-[18px] before:h-[12px] sm:before:h-[15px] before:bg-azul'>Sobre Mí</span></span>
             </motion.h2>
             <motion.p className='max-w-[644px] font-roboto text-white leading-[1.7] mt-7 '  {...reveal} onMouseEnter={mouseEnterText} onMouseLeave={mouseLeaveSectionss}>
               Hola! Mi nombre es Martín y soy un apasionado del desarrollo web. Me considero un frontend developer <span className='font-semibold text-amarillo'>creativo</span> y <span className='font-semibold text-amarillo'>dedicado</span>, con buen ojo para el diseño y enfocado en crear experiencias de usuario agradables y accesibles.
@@ -42,7 +40,7 @@ const isMobile = window.innerWidth <= 600;
               <motion.p className='max-w-[644px] font-roboto text-white leading-[1.7] '  {...reveal} onMouseEnter={mouseEnterText} onMouseLeave={mouseLeaveSectionss}>
               Estoy buscando mi primer puesto como desarrollador front-end en el que pueda <span className="font-semibold text-amarillo">aportar, aprender <span className="text-white font-normal">y</span> crecer</span>. Si tenes alguna propuesta que concuerde con mis habilidades no dudes en <span className="font-semibold text-amarillo underline">contactarme</span>!
               </motion.p>
-            <a href={CV} download="CV Martín Morici"><motion.span className='group block w-fit' viewport={{once:true}} initial={isMobile ? {} :{opacity:0, y:20}} whileInView={isMobile ? {} :{opacity:1,y:0}} transition={{type:'easeInOut', duration:.5}} onMouseEnter={mouseEnterTitle} onMouseLeave={mouseLeaveSectionss}><button className='flex justify-center items-center text-white font-semibold font-poppins px-4 py-2 bg-violeta mt-8 rounded-full group-hover:scale-105 md:group-hover:scale-100 md:group-hover:-rotate-6 transition-all' >Descargar CV <CVIcon className='ml-3 w-5 h-[20px]'/> </button></motion.span></a>
+            <a href={CV} download="CV Martín Morici"><motion.span className='group block w-fit' viewport={{once:true}} initial={isMobile ? {} :{opacity:0, y:20}} whileInView={isMobile ? {} :{opacity:1,y:0}} transition={{type:'easeInOut', duration:.5}} onMouseEnter={mouseEnterTitle} onMouseLeave={mouseLeaveSectionss}><button className='flex justify-center items-center text-white font-semibold font-poppins px-5 py-3 bg-violeta mt-8 rounded-sm group-hover:scale-105 transition-all' >Descargar CV <CVIcon className='ml-3 w-5 h-[20px]'/> </button></motion.span></a>
           </div>
    
           <motion.div className='hidden lg:block'  viewport={{once:true}} initial={ {opacity:0, y:200}} whileInView={ {opacity:1,y:90}} transition={{type:'easeInOut', duration:.5}}  onMouseEnter={mouseEnterTitle} onMouseLeave={mouseLeaveSectionss}>

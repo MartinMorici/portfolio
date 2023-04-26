@@ -10,7 +10,7 @@ import Container from './Container';
 const Projects = () => {
   const isMobile = window.innerWidth < 768;
   const atributos = isMobile ? {whileTap:{scale:1.1,transition:0.2}, transition:{ type: 'easeInOut' }} : {
-    whileHover:{rotate:'-9deg',transition:0.2}, viewport:{ once: true }, initial:{ opacity: 0, y: 50 }, whileInView:{ opacity: 1, y: 0 }, transition:{ type: 'easeInOut' }
+    whileHover:{scale:'1.05'}, viewport:{ once: true }, initial:{ opacity: 0, y: 50 }, whileInView:{ opacity: 1, y: 0 }, transition:{ type: 'easeInOut' }
   }
   const { mouseEnterTitle, mouseLeaveSectionss, mouseEnterText, mouseEnterButton,reveal, revealTechs } = useContext(CursorContext);
   return (
@@ -21,7 +21,7 @@ const Projects = () => {
             <span className='ml-[17px] group-hover:before:h-[36px] sm:group-hover:before:h-[45px] before:transition-all before:z-[-1]  before:w-[96%] before:absolute before:bottom-[10px] sm:before:bottom-[18px]  before:h-[12px] sm:before:h-[15px] before:bg-[#00BF8F]'>Proyectos</span>
           </span>
         </motion.h2>
-        <section className='mt-8 '>
+        <section className='mt-7 '>
           {projects.map((project, index) => {
             return (
               <article className=' rounded-md  sm:border-none flex gap-4 mb-20 justify-between items-start lg:items-center flex-col lg:flex-row w-fit mx-auto' key={index}>
@@ -39,7 +39,7 @@ const Projects = () => {
                     <div className='flex gap-3 gap-y-[0px] flex-wrap' onMouseEnter={mouseEnterText} onMouseLeave={mouseLeaveSectionss}>
                       {project.tecnologias.map((tec, index) => {
                         return (
-                          <motion.div key={index} className='flex items-center mt-4 bg-white font-semibold text-black rounded-[4px] font-poppins px-3 py-1 ' {...revealTechs}>
+                          <motion.div key={index} className='flex items-center mt-4 bg-white font-semibold text-black rounded-sm font-poppins px-3 py-1 ' {...revealTechs}>
                             <img className='h-[20px]' src={tec.imagen} alt={`${tec.nombre} imagen`} />
                             <h4 className='pl-2 text-[15px]'>{tec.nombre}</h4>
                           </motion.div>
@@ -47,14 +47,14 @@ const Projects = () => {
                       })}
                     </div>
                   </div>
-                  <div className='flex gap-5 mt-8 font-roboto flex-wrap'>
-                    <a href={project.website} target='_blank' className='group' onMouseEnter={mouseEnterButton} onMouseLeave={mouseLeaveSectionss}>
-                      <motion.button className='flex gap-3 px-4 py-1 text-[18px] sm:text-[20px] rounded-[2px] items-center bg-amarillo font-bold ' {...atributos}>
+                  <div className='flex gap-5 mt-4 font-roboto flex-wrap'>
+                    <a href={project.website} target='_blank' className='group transition-all' onMouseEnter={mouseEnterButton} onMouseLeave={mouseLeaveSectionss}>
+                      <motion.button className='flex gap-3 px-4 py-1 text-[18px] sm:text-[20px] rounded-sm items-center bg-amarillo font-bold transition-all ' {...atributos}>
                         Sitio web <FaLink className='w-[25px] h-[25px]' />
                       </motion.button>
                     </a>
-                    <a href={project.code} target='_blank' className='group' onMouseEnter={mouseEnterButton} onMouseLeave={mouseLeaveSectionss}>
-                      <motion.button className='flex gap-3 px-5 py-1 text-[18px] sm:text-[20px] rounded-[2px] items-center bg-amarillo font-bold'  {...atributos}>
+                    <a href={project.code} target='_blank' className='group transition-all' onMouseEnter={mouseEnterButton} onMouseLeave={mouseLeaveSectionss}>
+                      <motion.button className='flex gap-3 px-5 py-1 text-[18px] sm:text-[20px] rounded-sm items-center bg-amarillo font-bold transition-all'  {...atributos}>
                         Código <FaGithub className='w-[25px] h-[25px]' />
                       </motion.button>
                     </a>

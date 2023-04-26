@@ -53,32 +53,36 @@ const Contact = () => {
                         <motion.input required className='bg-transparent border-b border-white outline-none max-w-[450px] focus:border-amarillo placeholder-white py-2' type="email" name="user_email" placeholder='Email' {...reveal}  />
                         <motion.label className='mt-8 mb-1 block' name="message" htmlFor="message" {...reveal}>Mensaje</motion.label>
                         <motion.textarea required className='bg-[#242329] outline-none p-4 border-b-2 text-lg focus:border-amarillo'  name="message" id="message" cols="30" rows="10" {...reveal}  ></motion.textarea>
-                        <div  className='group' onMouseEnter={mouseEnterButton} onMouseLeave={mouseLeaveSectionss}><input type="submit" value="Enviar" className='mr-auto mt-8 bg-amarillo text-black sm:active:scale-110 font-semibold py-1 px-8 rounded-md sm:group-hover:rotate-[-12deg] transition-all' /></div>
+                        <div  className='group rounded-sm' onMouseEnter={mouseEnterButton} onMouseLeave={mouseLeaveSectionss}>
+                            <button type="submit" value="Enviar" className=' rounded-sm mr-auto mt-8 bg-amarillo text-black sm:active:scale-110 sm:group-hover:scale-105 font-semibold py-1 px-8 transition-all'>
+                                Enviar
+                            </button>
+                        </div>
                     </form>
                     <motion.article {...reveal} >
-                        <motion.h3 className='text-white text-2xl font-roboto font-semibold' {...reveal}>Información de Contacto</motion.h3>
-                        <motion.h3 className='mt-2 font-light text-white' {...reveal}>Si quieres contactarte conmigo no dudes en hacerlo! Te dejo acá todos los links y redes en las que estoy disponible.</motion.h3>
+                        <motion.h3 className='py-2 text-white text-2xl font-roboto font-semibold mb-4' {...reveal}>Información de Contacto</motion.h3>
+                        <motion.h3 className='mt-2 font-light text-white mb-4' {...reveal}>Si quieres contactarte conmigo no dudes en hacerlo! Te dejo acá todos los links y redes en las que estoy disponible.</motion.h3>
                         <ul onMouseEnter={mouseEnterButton} onMouseLeave={mouseLeaveSectionss} className='flex flex-col w-fit gap-6 mt-4 text-white font-semibold'>
-                            <motion.li className=' text-white group flex w-fit' {...reveal}>
+                            <motion.li className=' text-white group flex w-fit pt-2' {...reveal}>
                                 <a href="mailto:martinmorici3@gmail.com" className='flex items-center'>
                                     <FaEnvelope className='w-7 h-7 text-amarillo mr-2 group-hover:rotate-12 transition-all'/>
-                                </a>
                                     <h4>martinmorici3@gmail.com </h4>
+                                </a>
                             </motion.li>
                             <motion.li className='group' {...reveal}>
-                                <a className='flex items-center gap-2 w-fit' href="https://www.linkedin.com/in/martinmorici/" target='_blank'>
+                                <a className='flex items-center gap-2 w-fit py-1' href="https://www.linkedin.com/in/martinmorici/" target='_blank'>
                                 <FaLinkedinIn className='w-7 h-7 cursor-pointer text-amarillo group-hover:rotate-12 transition-all'/>
                                 <h4>martinmorici</h4>
                                 </a>
                             </motion.li>
                             <motion.li className='group' {...reveal}>
-                                <a className='flex items-center gap-2 w-fit' href="https://github.com/MartinMorici" target='_blank'>
+                                <a className='flex items-center gap-2 w-fit py-1' href="https://github.com/MartinMorici" target='_blank'>
                                 <FaGithub className='w-7 h-7 cursor-pointer text-amarillo group-hover:rotate-12  transition-all'/>
                                 <h4>MartinMorici</h4>
                                 </a>
                             </motion.li>
                             <motion.li className='group' {...reveal}>
-                                <a className='flex items-center gap-2 w-fit' href="https://wa.me/5493416913966" target='_blank'>
+                                <a className='flex items-center gap-2 w-fit py-1' href="https://wa.me/5493416913966" target='_blank'>
                                 <FaWhatsapp className='w-7 h-7 cursor-pointer text-amarillo group-hover:rotate-12 transition-all'/>
                                 <h4>+5493416913966</h4>
                                 </a>

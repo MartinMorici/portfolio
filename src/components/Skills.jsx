@@ -19,7 +19,7 @@ const Skills = () => {
                     {skills.map((skill,index) => {
                         return(
                             <motion.div {...revealSkills} className='group' key={index}>
-                                <div className='flex flex-col text-center skills:text-left justify-center skills:justify-start skills:flex-row max-w-[280px] mx-auto sm:max-w-none items-center skills:pl-4 bg-[#40404000] bg-[#444446] h-[80px] w-full rounded-[4px] z-20 font-poppins text-white sm:group-hover:bg-[#1f1f21] sm:group-hover:border-amarillo border-transparent border transform sm:group-hover:translate-y-[-5px] transition-all'>
+                                <div className='flex flex-col text-center skills:text-left justify-center skills:justify-start skills:flex-row max-w-[280px] mx-auto sm:max-w-none items-center skills:pl-4 bg-[#40404000] bg-[#444446] h-[80px] w-full rounded-sm z-20 font-poppins text-white sm:group-hover:bg-[#1f1f21] sm:group-hover:border-amarillo border-transparent border transform sm:group-hover:translate-y-[-5px] transition-all'>
                                     <img src={skill.img} alt="" />
                                     <span className='skills:ml-3 font-semibold text-[15px]'>{skill.nombre}</span>
                                 </div>
@@ -28,7 +28,6 @@ const Skills = () => {
                     })}
                 </div>
             </Container>
-            <IconosBackground/>
         </section>
   )
 }

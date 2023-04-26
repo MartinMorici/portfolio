@@ -38,7 +38,7 @@ const Header = () => {
                   setNavIsOpen(false);
                 }}
               >
-                <span className='md:group-hover:-rotate-12 group-hover:scale-105 group-hover:rotate-0 transition-all block group-hover:text-amarillo'>// inicio</span>
+                <span className=' block group-hover:text-amarillo group-hover:md:scale-105 transition-all'>// inicio</span>
               </a>
             </li>
             <li className='cursor-pointer group' onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
@@ -48,7 +48,7 @@ const Header = () => {
                   setNavIsOpen(false);
                 }}
               >
-                <span className='md:group-hover:-rotate-12 group-hover:scale-105 group-hover:rotate-0 transition-all block group-hover:text-amarillo'>// sobre mi</span>
+                <span className=' block group-hover:text-amarillo group-hover:md:scale-105 transition-all'>// sobre mi</span>
               </a>
             </li>
             <li className='cursor-pointer group' onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
@@ -58,7 +58,7 @@ const Header = () => {
                   setNavIsOpen(false);
                 }}
               >
-                <span className='md:group-hover:-rotate-12 group-hover:scale-105 group-hover:rotate-0 transition-all block group-hover:text-amarillo'>// skills</span>
+                <span className=' block group-hover:text-amarillo group-hover:md:scale-105 transition-all'>// skills</span>
               </a>
             </li>
             <li className='cursor-pointer group' onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
@@ -68,7 +68,7 @@ const Header = () => {
                   setNavIsOpen(false);
                 }}
               >
-                <span className='md:group-hover:-rotate-12 group-hover:scale-105 group-hover:rotate-0 transition-all block group-hover:text-amarillo'>// proyectos</span>
+                <span className=' block group-hover:text-amarillo group-hover:md:scale-105 transition-all'>// proyectos</span>
               </a>
             </li>
             <li className='cursor-pointer group' onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
@@ -78,7 +78,7 @@ const Header = () => {
                   setNavIsOpen(false);
                 }}
               >
-                <span className='md:group-hover:-rotate-12 group-hover:scale-105 group-hover:rotate-0 transition-all block group-hover:text-amarillo'>// contactame</span>
+                <span className=' block group-hover:text-amarillo group-hover:md:scale-105 transition-all'>// contactame</span>
               </a>
             </li>
           </ul>
