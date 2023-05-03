@@ -41,7 +41,7 @@ const Contact = () => {
           <Container>
             <section className=' flex justify-center flex-col font-roboto h-[1300px] sm:h-auto sm:py-[100px] '>
                 <motion.h2 className='w-fit leading-[0.95] text-white font-poppins font-semibold  text-[50px] sm:text-[75px] group' {...reveal} onMouseEnter={mouseEnterButton} onMouseLeave={mouseLeaveSectionss} >
-                  <span className='text-[30px] sm:text-[40px]'>//</span>
+                  <span className='text-[30px] sm:text-[40px]'>// </span>
                   <span className='relative z-[1]'>
                     <span className='group-hover:before:h-[45px] before:transition-all before:z-[-1]  before:w-[104%] before:absolute before:bottom-[18px] before:h-[12px] sm:before:h-[15px] before:bg-rosa'>Contacto</span>
                   </span>

@@ -3,16 +3,27 @@ html {
   font-family: 'Roboto Mono', monospace;
 }
 ::selection {
-    background: #3500D3;
-  }
-  .card{
-    border: 1px solid rgba(255, 255, 255, .25);
-    border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.45);
-    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
-  
-    backdrop-filter: blur(15px);
-  }
+  background: #3500d3;
+}
+.card {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+
+  backdrop-filter: blur(15px);
+}
+.swiper-pagination-bullet-active {
+  background: #CAFF2C;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: #3500d3;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after{
+  font-size: 30px;
+}
 .burger {
   display: flex;
   outline: none;
@@ -23,7 +34,6 @@ html {
   transition: all 250ms ease-out;
   cursor: pointer;
 }
-
 
 .barraDos {
   content: '';
@@ -69,8 +79,8 @@ html {
 }
 
 @media screen and (max-width: 768px) {
-  .svh{
-    height:85vh;
+  .svh {
+    height: 85vh;
   }
 }
 
@@ -82,12 +92,12 @@ input[type="submit"],
 input[type=”email”],
 input[type=”tel”],
 input[type=”number”],
-.input-radio-checkbox {  /* this is a class */
+.input-radio-checkbox {
+  /* this is a class */
   -webkit-appearance: none;
   appearance: none;
   border-radius: 0;
 }
-
 
 @tailwind base;
 @tailwind components;

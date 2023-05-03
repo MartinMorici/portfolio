@@ -2,9 +2,14 @@ import { motion } from 'framer-motion';
 import React from 'react';
 import { useContext } from 'react';
 import { FaGithub, FaLink } from 'react-icons/fa';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper";
 import { CursorContext } from '../context/CursorContext';
 import { projects } from '../utils/projects';
 import Container from './Container';
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 
 const Projects = () => {
@@ -49,13 +54,13 @@ const Projects = () => {
                   </div>
                   <div className='flex gap-5 mt-4 font-roboto flex-wrap'>
                     <a href={project.website} target='_blank' className='group transition-all' onMouseEnter={mouseEnterButton} onMouseLeave={mouseLeaveSectionss}>
-                      <motion.button className='flex gap-3 px-4 py-1 text-[18px] sm:text-[20px] rounded-sm items-center bg-amarillo font-bold transition-all ' {...atributos}>
-                        Sitio web <FaLink className='w-[25px] h-[25px]' />
+                      <motion.button className='flex gap-3 px-2 py-1 text-[18px] sm:text-[20px] rounded-sm items-center bg-amarillo  font-bold  ' {...atributos}>
+                        Web <FaLink className='w-[25px] h-[25px]' />
                       </motion.button>
                     </a>
                     <a href={project.code} target='_blank' className='group transition-all' onMouseEnter={mouseEnterButton} onMouseLeave={mouseLeaveSectionss}>
-                      <motion.button className='flex gap-3 px-5 py-1 text-[18px] sm:text-[20px] rounded-sm items-center bg-amarillo font-bold transition-all'  {...atributos}>
-                        Código <FaGithub className='w-[25px] h-[25px]' />
+                      <motion.button className='flex gap-3 px-2 py-1 text-[18px] sm:text-[20px] rounded-sm items-center bg-amarillo  font-bold '  {...atributos}>
+                        Code <FaGithub className='w-[25px] h-[25px]' />
                       </motion.button>
                     </a>
                   </div>
@@ -68,6 +73,26 @@ const Projects = () => {
             );
           })}
         </section>
+        <motion.h2 className='leading-[0.95] text-center text-white font-poppins font-semibold text-[40px] sm:text-[60px] group' {...reveal} onMouseEnter={mouseEnterButton} onMouseLeave={mouseLeaveSectionss}>
+          <span className='relative z-[1] '>
+            <span className='ml-[17px] group-hover:before:h-[36px] sm:group-hover:before:h-[45px] before:transition-all before:z-[-1]  before:w-[96%] before:absolute before:bottom-[10px] sm:before:bottom-[15px]  before:h-[10px] sm:before:h-[10px] before:bg-[#00BF8F]'>Otros proyectos</span>
+          </span>
+        </motion.h2>
+        <Swiper
+        slidesPerView={4}
+        spaceBetween={30}
+        navigation={true}
+        pagination={{clickable:true}}
+        modules={[Navigation, Pagination]}
+        className="mySwiper max-w-[1260px]"
+      >
+        <SwiperSlide className='h-[300px] rounded-sm bg-white'>Slide 1</SwiperSlide>
+        <SwiperSlide className='h-[300px] rounded-sm bg-white'>Slide 1</SwiperSlide>
+        <SwiperSlide className='h-[300px] rounded-sm bg-white'>Slide 3</SwiperSlide>
+        <SwiperSlide className='h-[300px] rounded-sm bg-white'>Slide 4</SwiperSlide>
+        <SwiperSlide className='h-[300px] rounded-sm bg-white'>Slide 5</SwiperSlide>
+        <SwiperSlide className='h-[300px] rounded-sm bg-white'>Slide 6</SwiperSlide>
+      </Swiper>
       </Container>
     </main>
   );
