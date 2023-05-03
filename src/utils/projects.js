@@ -11,12 +11,18 @@ import Sass from '../assets/sass.svg'
 import Framer from '../assets/framermotion.webp'
 import StyledComp from '../assets/styled-comp.png'
 import Tailwind from '../assets/tailwind.png'
+import Typescript from '../assets/typescript.svg'
 import Firebase from '../assets/firebase.svg'
 import Arrival from '../assets/projects/arrival.webp'
 import HBO from '../assets/projects/hbomax.webp'
 import DeLaCasa from '../assets/projects/delacasa.webp'
 import Disney from '../assets/projects/disney.webp'
 import Portfolio from '../assets/projects/portfolio.webp'
+import Basement from '../assets/projects/basement.webp'
+import Notter from '../assets/projects/notter.webp'
+import Aerolab from '../assets/projects/aerolab.webp'
+import Nacion from '../assets/projects/nacion.webp'
+import Quizz from '../assets/projects/quizz.webp'
 import ProductPage from '../assets/projects/productpage.webp'
 import Mentor from '../assets/projects/mentor.webp'
 
@@ -145,4 +151,113 @@ export const projects = [
         website:'https://martinmorici.github.io/DeLaCasa/',
         code:'https://github.com/MartinMorici/DeLaCasa'
     },
+]
+
+export const otherProjects= [
+    {
+        nombre: 'BASEMENT',
+        descripcion: 'Ecommerce pequeño donde se pueden agregar y quitar productos al carrito. La estetica de esta web es muy buena, pasa a mirarla!',
+        tecnologias:[
+            {
+                nombre: 'NextJS',
+                imagen: NextJS
+            },
+            {
+                nombre:'Typescript',
+                imagen: Typescript
+            },
+            {
+                nombre: 'Tailwind',
+                imagen: Tailwind
+            }
+        ],
+        imagen: Basement,
+        website:'https://basement-rho.vercel.app/',
+        code:'https://github.com/MartinMorici/basement'
+    },
+    {
+        nombre: 'AEROLAB',
+        descripcion: 'Una aplicación ecommerce que hace uso de una API para traer productos y comprarlos. Se pueden agregar monedas al usuario para comprar más productos.',
+        tecnologias:[
+            {
+                nombre: 'NextJS',
+                imagen: NextJS
+            },
+            {
+                nombre:'Typescript',
+                imagen: Typescript
+            },
+            {
+                nombre: 'ContextAPI',
+                imagen: ReactIcon
+            },
+            {
+                nombre: 'Tailwind',
+                imagen: Tailwind
+            }
+        ],
+        imagen: Aerolab,
+        website:'https://aerolab-challenge-blush-nine.vercel.app/',
+        code:'https://github.com/MartinMorici/aerolab-challenge'
+    },
+    {
+        nombre: 'NOTTER',
+        descripcion: 'Una aplicación de notas donde puedes agregar, quitar y archivar notas. Tambien pueden editarse e incluso cambiarles el color =)',
+        tecnologias:[
+            {
+                nombre:'Typescript',
+                imagen: Typescript
+            },
+            {
+                nombre: 'ContextAPI',
+                imagen: ReactIcon
+            },
+            {
+                nombre: 'Tailwind',
+                imagen: Tailwind
+            }
+        ],
+        imagen: Notter,
+        website:'https://ensolvers-challenge.vercel.app/',
+        code:'https://github.com/MartinMorici/ensolvers-challenge'
+    },
+    {
+        nombre: 'BLACKBOX QUIZZ',
+        descripcion: 'Un juego de preguntas que utiliza una API. Indica cual es la correcta cuando te equivocas y al final te da el puntaje obtenido. ',
+        tecnologias:[
+            {
+                nombre:'Typescript',
+                imagen: Typescript
+            },
+            {
+                nombre: 'SASS',
+                imagen: Sass
+            }
+        ],
+        imagen: Quizz,
+        website:'https://blackbox-vision-challenge-orcin.vercel.app/',
+        code:'https://github.com/MartinMorici/blackbox-vision-challenge'
+    },
+    {
+        nombre: 'LA NACIÓN CHALLENGE',
+        descripcion: 'Challenge de React realizado para La Nación. Replicando layout escritorio y mobile. Productos traidos de un JSON, junto con sus categorías',
+        tecnologias:[
+            {
+                nombre: 'NextJS',
+                imagen: NextJS
+            },
+            {
+                nombre:'Typescript',
+                imagen: Typescript
+            },
+            {
+                nombre: 'Tailwind',
+                imagen: Tailwind
+            }
+        ],
+        imagen: Nacion,
+        website:'https://lanacion-challenge.vercel.app/',
+        code:'https://github.com/MartinMorici/lanacion-challenge'
+    },
+
 ]

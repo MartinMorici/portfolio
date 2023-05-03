@@ -39,7 +39,7 @@ const Contact = () => {
   return (
       <section className=' bg-gris-oscuro ' id="contact">
           <Container>
-            <section className=' flex justify-center flex-col font-roboto h-[1300px] sm:h-auto sm:py-[100px] '>
+            <section className=' flex justify-center flex-col font-roboto h-[1300px] sm:pt-80 sm:h-auto sm:py-[100px] '>
                 <motion.h2 className='w-fit leading-[0.95] text-white font-poppins font-semibold  text-[50px] sm:text-[75px] group' {...reveal} onMouseEnter={mouseEnterButton} onMouseLeave={mouseLeaveSectionss} >
                   <span className='text-[30px] sm:text-[40px]'>// </span>
                   <span className='relative z-[1]'>
