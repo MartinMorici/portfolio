@@ -22,6 +22,15 @@ const Projects = () => {
         whileInView: { opacity: 1, y: 0 },
         transition: { type: 'easeInOut' },
       };
+      
+  const breakpoints = {
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  };
   const { mouseEnterTitle, mouseLeaveSectionss, mouseEnterText, mouseEnterButton, reveal, revealTechs } = useContext(CursorContext);
   return (
     <main className='flex items-center z-20 bg-gris-oscuro ' id='projects'>
@@ -80,17 +89,25 @@ const Projects = () => {
           })}
         </section>
         <section onMouseEnter={mouseEnterText} onMouseLeave={mouseLeaveSectionss}>
-          <motion.h2 className='mb-7 leading-[0.95] w-fit mx-auto text-white font-poppins font-semibold text-[40px] sm:text-[60px] group' {...reveal} onMouseEnter={mouseEnterButton} onMouseLeave={mouseLeaveSectionss}>
+          <motion.h2 className='mb-7 leading-[0.95] w-fit mx-auto text-white font-poppins font-semibold text-[30px] sm:text-[60px] group' {...reveal} onMouseEnter={mouseEnterButton} onMouseLeave={mouseLeaveSectionss}>
             <span className='relative z-[1] '>
-              <span className='ml-[17px] group-hover:before:h-[36px] sm:group-hover:before:h-[45px] before:transition-all before:z-[-1]  before:w-[96%] before:absolute before:bottom-[10px] sm:before:bottom-[15px]  before:h-[10px] sm:before:h-[10px] before:bg-[#00BF8F]'>Otros proyectos</span>
+              <span className='sm:ml-[17px]  group-hover:before:h-[36px] sm:group-hover:before:h-[45px] before:transition-all before:z-[-1] before:w-[96%]  sm:before:w-[96%] before:absolute before:bottom-[6px] sm:before:bottom-[15px]  before:h-[6px] sm:before:h-[10px] before:bg-[#00BF8F]'>Otros proyectos</span>
             </span>
           </motion.h2>
-          <Swiper slidesPerView={3} spaceBetween={50} navigation={true} pagination={{ clickable: true }} modules={[Navigation, Pagination]} className='mySwiper max-w-[1100px]'>
+          <Swiper
+          slidesPerView={1}
+            breakpoints={breakpoints}
+            spaceBetween={50}
+            navigation={true}
+            pagination={{ clickable: true }}
+            modules={[Navigation, Pagination]}
+            className='mySwiper max-w-[1100px]'
+          >
             {otherProjects.map((proj) => {
               return (
-                <SwiperSlide className='rounded-sm h-[460px] bg-[#444446]'>
+                <SwiperSlide className='rounded-sm h-[500px] sm:h-[460px] bg-[#444446]'>
                   <img className=' w-full h-[164px] object-cover' src={proj.imagen} alt={proj.nombre} />
-                  <div className='px-3 h-[263px] flex flex-col'>
+                  <div className='px-3 h-[300px] sm:h-[263px] flex flex-col'>
                     <h3 className='font-poppins text-white leading-8 font-semibold text-[20px]  mt-3 z-[5]'>{proj.nombre}</h3>
                     <p className='text-gray-300'>{proj.descripcion}</p>
                     <div className='flex flex-wrap gap-1 mt-3'>
