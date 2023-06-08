@@ -23,8 +23,7 @@ import Notter from '../assets/projects/notter.webp'
 import Aerolab from '../assets/projects/aerolab.webp'
 import Nacion from '../assets/projects/nacion.webp'
 import Quizz from '../assets/projects/quizz.webp'
-import ProductPage from '../assets/projects/productpage.webp'
-import Mentor from '../assets/projects/mentor.webp'
+import Weather from '../assets/projects/weatherapp.webp'
 
 
 
@@ -258,6 +257,23 @@ export const otherProjects= [
         imagen: Nacion,
         website:'https://lanacion-challenge.vercel.app/',
         code:'https://github.com/MartinMorici/lanacion-challenge'
+    },
+    {
+        nombre: 'WEATHER APP',
+        descripcion: 'Aplicacion de consulta de clima en tu ubicación actual y en 5 ciudades predefinidas. Utilizando la api de Open Weather Map.',
+        tecnologias:[
+            {
+                nombre:'Typescript',
+                imagen: Typescript
+            },
+            {
+                nombre: 'Tailwind',
+                imagen: Tailwind
+            }
+        ],
+        imagen: Weather,
+        website:'https://weather-app-sooty-psi.vercel.app/',
+        code:'https://github.com/MartinMorici/weather-app'
     },
 
 ]
